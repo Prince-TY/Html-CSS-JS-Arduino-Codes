@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Detection Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Motion Detection System</h1>
+        <p>ESP32 Smart Security Dashboard</p>
+    </header>
+
+    <main class="dashboard">
+
+        <!-- Sensor Status -->
+        <div class="card">
+            <h2>Sensor Status</h2>
+
+            <div id="status" class="status safe">
+                NO MOTION DETECTED
+            </div>
+
+            <p id="message">
+                The monitored area is safe.
+            </p>
+        </div>
+
+        <!-- Motion Information -->
+        <div class="card">
+            <h2>Motion Information</h2>
+
+            <p>Motion Events:</p>
+            <h3 id="count">0</h3>
+
+            <p>Last Detection:</p>
+            <h3 id="lastTime">None</h3>
+        </div>
+
+        <!-- Sensor Information -->
+        <div class="card">
+            <h2>Sensor Information</h2>
+            <p>Sensor: PIR</p>
+            <p>Controller: ESP32</p>
+            <p id="connection">Connection: Demo Mode</p>
+        </div>
+
+        <!-- LED Control -->
+        <div class="card">
+            <h2>LED Control</h2>
+
+            <div id="ledStatus" class="led-status">
+                LED IS OFF
+            </div>
+
+            <button class="led-on" onclick="turnLedOn()">
+                LED ON
+            </button>
+
+            <button class="led-off" onclick="turnLedOff()">
+                LED OFF
+            </button>
+        </div>
+
+        <!-- Test Dashboard -->
+        <div class="card controls">
+            <h2>Test Dashboard</h2>
+
+            <button onclick="detectMotion()">
+                Simulate Motion
+            </button>
+
+            <button onclick="clearMotion()">
+                Clear Motion
+            </button>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
