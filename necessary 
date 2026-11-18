@@ -1,0 +1,21 @@
+PHP Built-in Functions: Workshop Guide Page 1
+PHP Built-in Functions
+A workshop guide: what the most useful functions do, and five exercises to practise them.
+Plan for about 2 to 3 hours.
+What is a built-in function? It is a ready-made tool that PHP already contains. You give it some input
+(called arguments), it does one job, and it hands back a result. You never have to write the code
+inside it, you only have to know its name, what it needs, and what it gives back.
+How a function call reads
+$name = " jacques ";
+$clean = trim($name); // function: trim, input: $name
+echo strtoupper($clean); // prints JACQUES
+Read it from the inside out: the input goes in the brackets, the function does its job, and the result can
+be stored in a variable or printed straight away.
+Suggested session plan
+Time Activity
+20 min Introduction: what a function is, how to read the manual page on php.net
+40 min String functions, with live demos
+30 min Array functions, with live demos
+20 min Math functions and date functions
+10 min Break
+60 min The five exercises, then review answers together
